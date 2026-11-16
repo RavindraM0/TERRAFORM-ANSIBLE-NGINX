@@ -6,6 +6,21 @@ This project demonstrates Infrastructure as Code (IaC) and configuration managem
 
 The objective is to automate infrastructure deployment and web server configuration, reducing manual intervention and ensuring consistency.
 
+## Architecture Diagram
+
+The following architecture illustrates the end-to-end infrastructure automation workflow using Terraform, Ansible, AWS EC2, Nginx, and Amazon CloudWatch.
+
+![Terraform Ansible Nginx AWS Architecture](./architecture.png)
+
+### Architecture Workflow
+
+1. **GitHub:** Stores Terraform and Ansible project files.
+2. **Terraform:** Provisions AWS infrastructure.
+3. **AWS EC2:** Hosts the Ubuntu server inside a VPC.
+4. **Ansible:** Connects to EC2 through SSH and automates Nginx installation and configuration.
+5. **Nginx:** Serves web content to end users over HTTP/HTTPS.
+6. **Amazon CloudWatch:** Collects monitoring metrics and logs, and supports alarms and dashboards.
+
 ## Architecture
 
 ```text
